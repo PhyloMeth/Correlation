@@ -1,0 +1,10 @@
+Package: PhyloMethCorrelation
+Version: 1.0
+Date: 2016-01-21
+Title: PhyloMeth exercises for examining trait correlations
+Author: Brian O'Meara <omeara.brian@gmail.com>
+Maintainer: Brian O'Meara <omeara.brian@gmail.com>
+Depends: ape, corHMM
+Suggests: testthat
+Description: This skeleton has code for you to fix to learn how to infer trees. Note that it includes some sample files from Alexis Stamatakis: see his tutorial at http://sco.h-its.org/exelixis/web/software/raxml/hands_on.html for the originals.
+License: GPL (>= 2)
