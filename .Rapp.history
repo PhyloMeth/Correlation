@@ -1,0 +1,489 @@
+install.packages("mafft")
+devtools::check("~/Desktop/2016Spring/Phylometh/GettingStarted")
+?wd
+devtools::check("~/Desktop/2016Spring/Phylometh/GettingStarted")
+data(woodmouse)
+?mafft
+result <- mafft(woodmouse) #hint, look up one line
+return(result)
+mafft(woodmouse)
+install.packages("ctv") #the CRAN task view package#
+#
+library(ctv) #to load the package#
+install.views(c("Phylogenetics", "WebTechnologies"))#
+#
+install.packages("testthat")#
+#
+source("http://bioconductor.org/biocLite.R")#
+biocLite()#
+biocLite("Biostrings")
+?howmanytrees
+ntaxa=10
+ntaxa
+result <- howmanytrees(ntaxa)
+result
+return(result)
+?test_check
+library(testthat)
+?test_check
+library(ctv) # CRAN task view package#
+install.views(c("Phylogenetics", "WebTechnologies"))#
+#
+install.packages("testthat")#
+#
+source("http://bioconductor.org/biocLite.R")#
+biocLite()#
+biocLite("Biostrings")
+in.place=FALSE
+input.path=NULL
+input.file = "binary.phy"
+output.path=NULL
+output.name = "morpho1"
+random.seed=9
+model="ASC_BINGAMMA"
+other='--asc-corr=lewis'
+if(!in.place) {#
+		if(is.null(input.path)) {#
+			fpath <- system.file("extdata", input.file, package="PhyloMethLikelihoodTrees")#
+			system(paste("cp ", fpath, " ", output.path,"/", input.file, sep=""))#
+		} else {#
+			system.call <- paste("cp ", input.path, "/", input.file, " ", output.path,"/", input.file, sep="")#
+			cat(system.call, file="~/Desktop/test_call.txt")#
+			system(system.call)	#
+		}#
+		cur.wd <- getwd()#
+		setwd(output.path)#
+	}
+input.path=~/Desktop/2016Spring/Phylometh/LikelihoodTrees
+input.path="~/Desktop/2016Spring/Phylometh/LikelihoodTrees"
+if(!in.place) {#
+		if(is.null(input.path)) {#
+			fpath <- system.file("extdata", input.file, package="PhyloMethLikelihoodTrees")#
+			system(paste("cp ", fpath, " ", output.path,"/", input.file, sep=""))#
+		} else {#
+			system.call <- paste("cp ", input.path, "/", input.file, " ", output.path,"/", input.file, sep="")#
+			cat(system.call, file="~/Desktop/test_call.txt")#
+			system(system.call)	#
+		}#
+		cur.wd <- getwd()#
+		setwd(output.path)#
+	}
+fpath
+if(!in.place) {#
+		if(is.null(input.path)) {#
+			fpath <- system.file("extdata", input.file, package="PhyloMethLikelihoodTrees")#
+			system(paste("cp ", input.path, " ", output.path,"/", input.file, sep=""))#
+		} else {#
+			system.call <- paste("cp ", input.path, "/", input.file, " ", output.path,"/", input.file, sep="")#
+			cat(system.call, file="~/Desktop/test_call.txt")#
+			system(system.call)	#
+		}#
+		cur.wd <- getwd()#
+		setwd(output.path)#
+	}
+input.path
+output.path
+input.path=NULL
+if(!in.place) {#
+		if(is.null(input.path)) {#
+			fpath <- system.file("extdata", input.file, package="PhyloMethLikelihoodTrees")#
+			system(paste("cp ", input.path, " ", output.path,"/", input.file, sep=""))#
+		} else {#
+			system.call <- paste("cp ", input.path, "/", input.file, " ", output.path,"/", input.file, sep="")#
+			cat(system.call, file="~/Desktop/test_call.txt")#
+			system(system.call)	#
+		}#
+		cur.wd <- getwd()#
+		setwd(output.path)#
+	}
+library(PhyloMethLikelihoodTrees)#
+results <- InferDNATreeWithBootstrappingAndPartitions_exercise()
+library(ape)
+plot.phylo(results$ml.with.bs.tree, show.node.label=TRUE)
+input.path=~/Desktop/2016Spring/Phylometh/LikelihoodTrees
+results <- InferDNATreeWithBootstrappingAndPartitions_exercise(in.place=FALSE, input.path="~/Desktop/2016Spring/Phylometh/LikelihoodTrees/inst/extdata", input.file = "binary.phy", output.path=NULL, output.name = "morpho1", random.seed=17, model="ASC_BINGAMMA", other='--asc-corr=lewis')
+results <- InferDNATreeWithBootstrappingAndPartitions_exercise(in.place=FALSE, input.path="~/Desktop/2016Spring/Phylometh/LikelihoodTrees/inst/extdata", input.file = "binary.phy", output.path=NULL, output.name = "morpho1", random.seed=17, model="ASC_BINGAMMA")
+results <- InferDNATreeWithBootstrappingAndPartitions_exercise(in.place=FALSE, input.path="~/Desktop/2016Spring/Phylometh/LikelihoodTrees/inst/extdata", input.file = "dna.phy", input.partition = "dna12_3.partition.txt", output.path=NULL, output.name = "dna1", random.seed=12345, boot.seed=17, model="GTRGAMMA", boot=100)
+library(PhyloMethLikelihoodTrees)
+results <- InferDNATreeWithBootstrappingAndPartitions_exercise(in.place=FALSE, input.path="~/Desktop/2016Spring/Phylometh/LikelihoodTrees/inst/extdata", input.file = "dna.phy", input.partition = "dna12_3.partition.txt", output.path=NULL, output.name = "dna1", random.seed=18, boot.seed=17, model="GTRGAMMA", boot=100)
+library(PhyloMethLikelihoodTrees)
+results <- InferDNATreeWithBootstrappingAndPartitions_exercise(in.place=FALSE, input.path="~/Desktop/2016Spring/Phylometh/LikelihoodTrees/inst/extdata", input.file = "dna.phy", input.partition = "dna12_3.partition.txt", output.path=NULL, output.name = "dna1", random.seed=18, boot.seed=17, model="GTRGAMMA", boot=100)
+results <- InferDNATreeWithBootstrappingAndPartitions_exercise(in.place=FALSE, input.path="~/Desktop/2016Spring/Phylometh/LikelihoodTrees/inst/extdata", input.file = "dna.phy", input.partition = "dna12_3.partition.txt", output.path="~/Desktop/2016Spring/Phylometh/LikelihoodTrees/inst/extdata", output.name = "dna1", random.seed=18, boot.seed=17, model="GTRGAMMA", boot=100)
+library(ape)
+plot.phylo(results$ml.with.bs.tree, show.node.label=TRUE)
+GenerateStateAtEnd <- function(starting.state = 0, prob.change.on.this.branch = 0.01){#
+	if(runif(1,0,1)<prob.change.on.this.branch){#
+		final.state <- 1+starting.state#
+	}else{#
+		final.state <- starting.state#
+	}#
+	if(final.state>1){#
+		final.state=0#
+	}#
+	return(final.state)#
+}
+GenerateStateAtEnd()
+GenerateStateAtEnd <- function(starting.state = 0, prob.change.on.this.branch = 0.5){#
+	if(runif(1,0,1)<prob.change.on.this.branch){#
+		final.state <- 1+starting.state#
+	}else{#
+		final.state <- starting.state#
+	}#
+	if(final.state>1){#
+		final.state=0#
+	}#
+	return(final.state)#
+}
+GenerateStateAtEnd(0.5)
+runif(1,0,1)<prob.change.on.this.branch
+runif(1,0,1)<0.5
+GenerateStateAtEnd <- function(starting.state = 0, prob.change.on.this.branch = 0.5){#
+	if(runif(1,0,1)<prob.change.on.this.branch){#
+		final.state <- 1+starting.state#
+	}else{#
+		final.state <- starting.state#
+	}#
+	if(final.state>1){#
+		final.state=0#
+	}#
+	return(final.state)#
+}
+GenerateStateAtEnd()
+library(PhyloMethLikelihoodTrees)
+results <- InferDNATreeWithBootstrappingAndPartitions_exercise(in.place=FALSE, input.path="~/Desktop/2016Spring/Phylometh/LikelihoodTrees/inst/extdata", input.file = "dna.phy", input.partition = "dna12_3.partition.txt", output.path="~/Desktop/2016Spring/Phylometh/LikelihoodTrees/inst/extdata", output.name = "dna1", random.seed=18, boot.seed=17, model="GTRGAMMA", boot=100)
+plot.phylo(results$ml.with.bs.tree, show.node.label=TRUE)
+git clone https://github.com/rwoolive/Correlation.git
+library(ape) #utility fns#
+library(geiger) #utilty fns#
+library(corHMM)#
+library(phylolm)#
+library(phytools)
+setwd("~/Desktop/2016Spring/Phylometh/Correlation")
+tree29 <- read.tree("Euc.final.dated.tre")#
+tree29$tip.label <- paste("E.", tree29$tip.label, sep=" ")#
+tree <- drop.tip(tree29, c("E. morrisbyi","E. nitida","E. vernicosa" ,"E. johnstonii","E. perriniana","E. nitens" ))
+write.tree(tree, "eucTree.tre")
+read.tree("eucTree.tre")
+eucTree <- read.tree("eucTree.tre")
+plot.phylo(eucTree, type="fan")
+data <- read.csv("eucData.csv")
+data
+eucTree$tip.label
+eucTree$tip.label <- gsub("_"," ", eucTree$tip.label)
+eucTree$tip.label
+data
+data <- read.csv("eucData.csv", row.names=1)
+data
+treedata(eucTree, eucData)
+eucData <- read.csv("eucData.csv", row.names=1)
+treedata(eucTree, eucData)
+return(treedata(eucTree, eucData))
+treedata(eucTree, eucData)
+par(mfrow=c(2,1))
+plot.phylo(eucTree)
+par(mfrow=c(1,2))
+plot.phylo(eucTree)
+eucData
+plot(eucData$aggregation ~ eucData$ala.Elevation)
+plot(eucData$aggregation ~ eucData$ala.Elevation, ylab="Aggregation", xlab="Average elevation")
+plot(eucData$aggregation ~ eucData$ala.Elevation, ylab="Aggregation (%)", xlab="Average elevation (m)")
+?quartz
+quartz(height=6, width=5)
+layout(matrix=c(1,2,3,3))
+layout(matrix(c(1,2,3,3)))
+hist(eucData$aggregation)
+layout(matrix(c(1,2,3,3), 2,2))
+hist(eucData$aggregation)
+hist(eucData$ala.Elevation)
+layout(matrix(c(1,2,3,3), 2,2, byrow=T))
+hist(eucData$aggregation)
+hist(eucData$ala.Elevation)
+plot(data$aggregation ~ data$ala.Elevation)
+layout(matrix(c(1,2,3,3), 2,2, byrow=T))#
+	hist(eucData$aggregation)#
+	hist(eucData$ala.Elevation)#
+	# regress through the origin, #
+	plot(eucData $aggregation ~ eucData $ala.Elevation, xlim=c(0, max(eucData $ala.Elevation)), ylim=c(0, max(eucData
+$aggregation)))
+layout(matrix(c(1,2,3,3), 2,2, byrow=T))#
+	hist(eucData$aggregation)#
+	hist(eucData$ala.Elevation)#
+	# regress through the origin, #
+	plot(eucData $aggregation ~ eucData $ala.Elevation, xlim=c(0, max(eucData $ala.Elevation)), ylim=c(0, max(eucData $aggregation)))
+max(eucData $aggregation)
+eucData <-na.omit( read.csv("eucData.csv", row.names=1))
+eucData
+treedata(eucPhy, eucData)
+treedata(eucTree, eucData)
+layout(matrix(c(1,2,3,3), 2,2, byrow=T))#
+	hist(eucData$aggregation)#
+	hist(eucData$ala.Elevation)#
+	# regress through the origin, #
+	plot(eucData $aggregation ~ eucData $ala.Elevation, xlim=c(0, max(eucData $ala.Elevation)), ylim=c(0, max(eucData $aggregation)))
+eucTree <- read.tree("eucTree.tre")#
+eucTree$tip.label <- gsub("_"," ", eucTree$tip.label)#
+eucData <-na.omit( read.csv("eucData.csv", row.names=1))
+?pic
+treedata(eucTree, eucData)
+yPic<-pic(treedata(eucTree, eucData)$data$aggregation, treedata(eucTree, eucData)$phy)
+yPic
+treedata(eucTree, eucData)$data
+treedata(eucTree, eucData)$data$aggregation
+yDat <- treedata(eucTree, eucData)$data
+yDat
+Dat <- treedata(eucTree, eucData)$data
+yPic<-pic(Dat$aggregation, treedata(eucTree, eucData)$phy)
+Phy <- treedata(eucTree, eucData)$phy
+Dat
+Phy
+Dat$aggregation
+Dat[,1]
+yPic<-pic(Dat[,1], Phy)
+Dat <- treedata(eucTree, eucData)$data#
+	Phy <- treedata(eucTree, eucData)$phy#
+	yPic<-pic(Dat[,1], Phy)#
+	xPic<-pic(Dat[,2], Phy)
+xPic
+yPic
+yPic<-pic(Dat[,1], Phy); yPicPos <- yPic + min(yPic)
+yPicPos
+min(yPic)
+min(yPic) + yPic
+min(yPic)
+yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic
+yPicPos
+yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic#
+	xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic
+layout(matrix(c(1,2,3,4,5,5), 2,2, byrow=T))
+hist(eucData$aggregation)#
+	hist(eucData$ala.Elevation)
+# look at your data, #
+	layout(matrix(c(1,2,3,4,5,5), 2,2, byrow=T))#
+	hist(eucData$aggregation)#
+	hist(eucData$ala.Elevation)#
+	Dat <- treedata(eucTree, eucData)$data#
+	Phy <- treedata(eucTree, eucData)$phy#
+	yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic; hist(yPicPos)#
+	xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic; hist(xPicPos)
+layout(matrix(c(1,2,3,4,5,5), 3,2, byrow=T))#
+	hist(eucData$aggregation)#
+	hist(eucData$ala.Elevation)#
+	Dat <- treedata(eucTree, eucData)$data#
+	Phy <- treedata(eucTree, eucData)$phy#
+	yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic; hist(yPicPos)#
+	xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic; hist(xPicPos)
+layout(matrix(c(1,2,3,4,5,5), 3,2, byrow=T))#
+	hist(eucData$aggregation)#
+	hist(eucData$ala.Elevation)#
+	Dat <- treedata(eucTree, eucData)$data#
+	Phy <- treedata(eucTree, eucData)$phy#
+	yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic; hist(log(yPicPos))#
+	xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic; hist(log(xPicPos))
+lm(log(yPicPos) ~ log(xPicPos))
+yPicPos
+log(yPicPos)
+log(xPicPos)
+xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic; hist(log(xPicPos))
+xPicPos
+layout(matrix(c(1,2,3,4,5,5), 3,2, byrow=T))#
+	hist(eucData$aggregation)#
+	hist(eucData$ala.Elevation)#
+	Dat <- treedata(eucTree, eucData)$data#
+	Phy <- treedata(eucTree, eucData)$phy#
+	yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic + 1; hist(log(yPicPos))#
+	xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic + 1; hist(log(xPicPos))#
+	# regress through the origin, #
+	mod <- lm(log(yPicPos) ~ log(xPicPos))
+mod
+plot(yPicPos ~ xPicPos, xlim=c(0, max(eucData $ala.Elevation)), ylim=c(0, max(eucData $aggregation))); abline(mod)
+layout(matrix(c(1,2,3,4,5,5), 3,2, byrow=T))#
+	hist(eucData$aggregation)#
+	hist(eucData$ala.Elevation)#
+	Dat <- treedata(eucTree, eucData)$data#
+	Phy <- treedata(eucTree, eucData)$phy#
+	yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic + 1; hist(log(yPicPos))#
+	xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic + 1; hist(log(xPicPos))#
+	# regress through the origin, #
+	mod <- lm(log(yPicPos) ~ log(xPicPos)) #
+	plot(log(yPicPos) ~ log(xPicPos), xlim=c(0, max(xPicPos)), ylim=c(0, max(yPicPos))); abline(mod)
+log(yPicPos)
+max(xPicPos)
+plot(log(yPicPos) ~ log(xPicPos), xlim=c(0, max(log(xPicPos))), ylim=c(0, max(log(yPicPos)))); abline(mod)
+layout(matrix(c(1,2,3,4,5,5), 3,2, byrow=T))#
+	hist(eucData$aggregation)#
+	hist(eucData$ala.Elevation)#
+	Dat <- treedata(eucTree, eucData)$data#
+	Phy <- treedata(eucTree, eucData)$phy#
+	yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic + 1; hist(log(yPicPos))#
+	xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic + 1; hist(log(xPicPos))#
+	# regress through the origin, #
+	mod <- lm(log(yPicPos) ~ log(xPicPos)) #
+	plot(log(yPicPos) ~ log(xPicPos), xlim=c(0, max(log(xPicPos))), ylim=c(0, max(log(yPicPos)))); abline(mod)
+layout(matrix(c(1,2,3,4,5,5), 3,2, byrow=T))#
+	hist(eucData$aggregation, main="Histogram of aggregation (%)")#
+	hist(eucData$ala.Elevation, main="Histogram of elevation (m)")#
+	Dat <- treedata(eucTree, eucData)$data#
+	Phy <- treedata(eucTree, eucData)$phy
+yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic + 1; hist((yPicPos), main="Histogram of aggregation PIC")
+Dat
+xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic + 1; hist(log(xPicPos), main="Histogram of elevation PIC")
+mod <- lm((yPicPos) ~(xPicPos))
+plot((yPicPos) ~(xPicPos), xlim=c(0, max((xPicPos))), ylim=c(0, max((yPicPos)))); abline(mod)
+layout(matrix(c(1,2,3,4,5,5), 3,2, byrow=T))#
+	hist(eucData$aggregation, main="Histogram of aggregation (%)")#
+	hist(eucData$ala.Elevation, main="Histogram of elevation (m)")#
+	Dat <- treedata(eucTree, eucData)$data#
+	Phy <- treedata(eucTree, eucData)$phy#
+	yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic + 1; hist((yPicPos), main="Histogram of aggregation PIC")#
+	xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic + 1; hist((xPicPos), main="Histogram of elevation PIC")#
+	# regress through the origin, #
+	mod <- lm((yPicPos) ~(xPicPos)) #
+	plot((yPicPos) ~(xPicPos), xlim=c(0, max((xPicPos))), ylim=c(0, max((yPicPos)))); abline(mod)
+quartz(height=7,width=4)
+layout(matrix(c(1,2,3,4,5,5), 3,2, byrow=T))#
+	hist(eucData$aggregation, main="Histogram of aggregation (%)")#
+	hist(eucData$ala.Elevation, main="Histogram of elevation (m)")#
+	Dat <- treedata(eucTree, eucData)$data#
+	Phy <- treedata(eucTree, eucData)$phy#
+	yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic + 1; hist((yPicPos), main="Histogram of aggregation PIC")#
+	xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic + 1; hist((xPicPos), main="Histogram of elevation PIC")#
+	# regress through the origin, #
+	mod <- lm((yPicPos) ~(xPicPos)) #
+	plot((yPicPos) ~(xPicPos), xlim=c(0, max((xPicPos))), ylim=c(0, max((yPicPos)))); abline(mod)
+return(summary(mod))
+summary(mod)
+mod <- lm((yPicPos) ~ 0+ (xPicPos))
+mod
+plot((yPicPos) ~(xPicPos), xlim=c(0, max((xPicPos))), ylim=c(0, max((yPicPos)))); abline(mod)#
+	# and return the results.
+mod <- lm((yPicPos) ~ (xPicPos) + 1)
+mod
+summary(mod)
+mod <- lm((yPicPos) ~ 0 +(xPicPos)) #
+	plot((yPicPos) ~(xPicPos), xlim=c(0, max((xPicPos))), ylim=c(0, max((yPicPos)))); abline(mod)#
+	# and return the results.#
+	return(summary(mod))
+layout(matrix(c(1,2,3,3), 3,2, byrow=T))
+plot.phylo(phy)
+plot.phylo(eucTree)
+layout(matrix(c(1,2,3,3), 2,2, byrow=T))
+plot.phylo(eucTree)
+layout(matrix(c(1,2,3,3), 2,2, byrow=T))
+plot.phylo(eucTree, no.margin=T)
+layout(matrix(c(1,2,1,3,4,5), 2,2, byrow=T))
+plot.phylo(eucTree, no.margin=T)
+hist(eucData$aggregation, main="Histogram of aggregation (%)")
+hist(eucData$ala.Elevation, main="Histogram of elevation (m)")
+plot(eucData$aggregation ~ data$ala.Elevation)
+plot(eucData$aggregation ~ eucData $ala.Elevation)
+layout(matrix(c(1,2,1,3,4,5), 3,2, byrow=T))#
+	plot.phylo(eucTree, no.margin=T)#
+	hist(eucData$aggregation, main="Histogram of aggregation (%)")#
+	hist(eucData$ala.Elevation, main="Histogram of elevation (m)")#
+	plot(eucData$aggregation ~ eucData $ala.Elevation)
+layout(matrix(c(1,2,1,3,4,5,5), 3,2, byrow=T))#
+	plot.phylo(eucTree)#
+	hist(eucData$aggregation, main="Histogram of aggregation (%)")#
+	hist(eucData$ala.Elevation, main="Histogram of elevation (m)")#
+	plot(eucData$aggregation ~ eucData $ala.Elevation)
+layout(matrix(c(1,2,1,3,4,4), 3,2, byrow=T))#
+	plot.phylo(eucTree)#
+	hist(eucData$aggregation, main="Histogram of aggregation (%)")#
+	hist(eucData$ala.Elevation, main="Histogram of elevation (m)")#
+	plot(eucData$aggregation ~ eucData $ala.Elevation)
+dev.off()
+layout(matrix(c(1,2,1,3,4,4), 3,2, byrow=T))#
+	plot.phylo(eucTree)#
+	hist(eucData$aggregation, main="Histogram of aggregation (%)")#
+	hist(eucData$ala.Elevation, main="Histogram of elevation (m)")#
+	plot(eucData$aggregation ~ eucData $ala.Elevation)
+quartz(height=7,width=5,type="pdf",dpi=600,file= output.pdf)#
+	# look at your data, #
+	layout(matrix(c(1,2,3,4,5,5), 3,2, byrow=T))#
+	hist(eucData$aggregation, main="Histogram of aggregation (%)")#
+	hist(eucData$ala.Elevation, main="Histogram of elevation (m)")#
+	Dat <- treedata(eucTree, eucData)$data#
+	Phy <- treedata(eucTree, eucData)$phy#
+	yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic + 1; hist((yPicPos), main="Histogram of aggregation PIC")#
+	xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic + 1; hist((xPicPos), main="Histogram of elevation PIC")#
+	# regress through the origin, #
+	mod <- lm((yPicPos) ~ 0 +(xPicPos)) #
+	plot((yPicPos) ~(xPicPos), xlim=c(0, max((xPicPos))), ylim=c(0, max((yPicPos)))); abline(mod)#
+	dev.off()
+quartz(height=7,width=5,type="pdf",dpi=600,file= output.pdf)
+output.pdf="PIC.pdf"
+quartz(height=7,width=5,type="pdf",dpi=600,file= output.pdf)
+layout(matrix(c(1,2,3,4,5,5), 3,2, byrow=T))#
+	hist(eucData$aggregation, main="Histogram of aggregation (%)")#
+	hist(eucData$ala.Elevation, main="Histogram of elevation (m)")#
+	Dat <- treedata(eucTree, eucData)$data#
+	Phy <- treedata(eucTree, eucData)$phy#
+	yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic + 1; hist((yPicPos), main="Histogram of aggregation PIC")#
+	xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic + 1; hist((xPicPos), main="Histogram of elevation PIC")#
+	# regress through the origin, #
+	mod <- lm((yPicPos) ~ 0 +(xPicPos)) #
+	plot((yPicPos) ~(xPicPos), xlim=c(0, max((xPicPos))), ylim=c(0, max((yPicPos)))); abline(mod)#
+	dev.off()
+cleandata <- treedata(eucTree, eucData)
+cleandata
+Dat <- treedata(eucTree, eucData)$data
+Phy <- treedata(eucTree, eucData)$phy
+Dat
+fitPagel(eucTree, Dat[,2], Dat[,1])
+Dat[,2]
+mean(Dat[,2])
+Dat[,2][which(Dat[,2]>500)]
+Dat[,2][which(Dat[,2]<500)] <- 0; Dat[,2][which(Dat[,2]>500)] <- 1
+Dat
+Dat[,1][which(Dat[,1]<50)] <- 0; Dat[,1][which(Dat[,1]>50)] <- 1 # 0 is low aggregation and 1 is high aggregation
+Dat
+# First get data and discretize#
+	Dat <- treedata(eucTree, eucData)$data#
+	Dat[,1][which(Dat[,1]<50)] <- 0; Dat[,1][which(Dat[,1]>50)] <- 1 # 0 is low aggregation and 1 is high aggregation#
+	Dat[,2][which(Dat[,2]<500)] <- 0; Dat[,2][which(Dat[,2]>500)] <- 1 # 0 is low elevation and 1 is high elevation#
+	# Then get tree#
+	Phy <- treedata(eucTree, eucData)$phy
+Dat
+fitPagel(eucTree, Dat[,2], Dat[,1])
+eucTree
+Dat
+Dat[,2]
+? fitPagel
+as.vector(Dat[,2])
+fitPagel(eucTree, as.vector(Dat[,2]), as.vector(Dat[,1]))
+fitPagel(eucTree, as.vector(Dat[,2]), as.vector(Dat[,1]), method="fitDiscrete")
+fitPagel(eucTree, Dat[,2], Dat[,1], method="fitDiscrete")
+Dat <- treedata(eucTree, eucData)$data
+Phy <- treedata(eucTree, eucData)$phy
+?phylolm
+phylolm(Dat[,1], Dat[,2], Phy, model="BM")
+phylolm(Dat[,1], Dat[,2], data=Dat, Phy, model="BM")
+Phy <- treedata(eucTree, eucData)$phy
+Phy
+phylolm(Dat[,1], Dat[,2], data=Dat, Phy, model="BM")
+phylolm(Dat[,1], Dat[,2], data=Dat, phy=Phy, model="BM")
+phylolm(Dat[,1], Dat[,2], phy=Phy, model="BM")
+Dat
+treedata(eucTree, eucData)$data
+phylolm(Dat[,1], Dat[,2], phy=Phy, model="OU")
+phylolm(Dat[,1], Dat[,2], phy=Phy, model="OUfixedRoot")
+phylolm(Dat[,1], Dat[,2], phy=Phy, model="BM")
+Dat
+Dat <- treedata(eucTree, eucData, sort=TRUE)$data
+Dat
+Phy <- treedata(eucTree, eucData, sort=TRUE)$phy
+phylolm(Dat[,1], Dat[,2], phy=Phy, model="BM")
+Dat
+Phy
+treedata(eucTree, data, sort=TRUE)
+layout(matrix(c(1,2,3,4,5,5), 3,2, byrow=T))#
+	hist(data[,1], main="Histogram of aggregation (%)")#
+	hist(data[,2], main="Histogram of elevation (m)")#
+	Dat <- treedata(phy, data, sort=TRUE)$data#
+	Phy <- treedata(phy, data, sort=TRUE)$phy#
+	yPic<-pic(Dat[,1], Phy); yPicPos <- abs(min(yPic)) + yPic + 1; hist((yPicPos), main="Histogram of aggregation PIC")#
+	xPic<-pic(Dat[,2], Phy); xPicPos <- abs(min(xPic)) + xPic + 1; hist((xPicPos), main="Histogram of elevation PIC")#
+	# regress through the origin, #
+	mod <- lm((yPicPos) ~ 0 +(xPicPos)) #
+	plot((yPicPos) ~(xPicPos), xlim=c(0, max((xPicPos))), ylim=c(0, max((yPicPos)))); abline(mod)
+Dat <- treedata(phy, data, sort=TRUE)$data
