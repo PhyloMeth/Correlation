@@ -26,6 +26,15 @@ RunContrasts <- function(phy, data, output.pdf="PIC.pdf") {
 }
 
 RunPagel94 <- function(phy, data) {
+	data<-discrete.data
+	ard.result<-corDISC(phy,data,ntraits=2,model="ARD")
+	print(ard.result)
+	#Calculate the rate estimates under each model, the likelihood of the data under each model, and the model averaged rates. 	Return the results
+}
+
+#This didn't work
+#RunPagel94 <- function(phy, data) {
+	fitPagel(phy,data[,1],data[,2])
 	#Calculate the rate estimates under each model, the likelihood of the data under each model, and the model averaged rates. 	Return the results
 }
 
