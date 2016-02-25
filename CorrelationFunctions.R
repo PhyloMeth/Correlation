@@ -4,9 +4,13 @@ library(corHMM)
 library(phylolm)
 library(phytools)
 
-VisualizeData <- function(phy, data) {
-	plot(phy)
-	plot(data)
+VisualizeData <- function(data) {
+	pdf("Visualize.pdf")
+	par(mfrow=c(1,3))
+	plot(data[[1]])
+	hist(data[[2]][,1])
+	hist(data[[2]][,2])
+	dev.off()
 }
 
 CleanData <- function(phy, data) {
@@ -25,11 +29,10 @@ RunContrasts <- function(phy, data, output.pdf="PIC.pdf") {
 	return(list(correlation,pic.model))
 }
 
-RunPagel94 <- function(phy, data) {
+RunPagel94 <- function(phy, data1, data2) {
 	#Calculate the rate estimates under each model, the likelihood of the data under each model, and the model averaged rates. 	Return the results
-	
-	# This isn't working. And I can't figure out why...
-	fitPagel(phy,dat[[2]][,1],dat[[2]][,2])
+
+	fitPagel(phy,data1,data2)
 	
 }
 
