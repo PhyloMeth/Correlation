@@ -28,6 +28,7 @@ RunContrasts <- function(phy, data, output.pdf="PIC.pdf") {
 RunPagel94 <- function(phy, data) {
 	#Calculate the rate estimates under each model, the likelihood of the data under each model, and the model averaged rates. 	Return the results
 	
+	# This isn't working. And I can't figure out why...
 	fitPagel(phy,dat[[2]][,1],dat[[2]][,2])
 	
 }
