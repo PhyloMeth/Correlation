@@ -32,10 +32,12 @@ RunContrasts <- function(phy, data, output.pdf="PIC.pdf") {
 RunPagel94 <- function(phy, data1, data2) {
 	#Calculate the rate estimates under each model, the likelihood of the data under each model, and the model averaged rates. 	Return the results
 
-	fitPagel(phy,data1,data2)
+	pagel.model <- fitPagel(phy,data1,data2)
 	
 }
 
 RunOtherMethod <- function(phy, data) {
+	
+	# Haven't done this bit yet...
 	
 }
