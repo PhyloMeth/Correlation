@@ -23,7 +23,7 @@ continuous.data <- cbind(SVL,larval.period)
 rownames(continuous.data) <- tree$tip.label
 
 cleaned.continuous <- CleanData(tree, continuous.data)
-cleaned.discrete <- CleanData(tree, discrete.data)
+cleaned.discrete <- CleanData(tree, discrete.1)
 
 VisualizeData(cleaned.continuous)
 VisualizeData(cleaned.discrete)
