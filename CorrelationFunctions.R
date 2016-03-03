@@ -7,6 +7,8 @@ library(rotl)
 library(phylobase)
 
 VisualizeData <- function(phy, data) {
+	plot(phy,cex=0.3)
+	print(data)
 	#Important here is to LOOK at your data before running it. Any weird values? Does it all make sense? What about your tree? Polytomies?
 }
 
