@@ -14,7 +14,7 @@ CleanData <- function(phy, data) {
 
 RunContrasts <- function(phy, data, output.pdf="PIC.pdf") {
 	#Include here approaches to save plots, look at your data, regress through the origin, and return the results.
-  pic(x, phy, scaled = TRUE, var.contrasts = TRUE #gives you contrasts and variances,
+  pic(x, phy, scaled = TRUE, var.contrasts = TRUE, #gives you contrasts and variances
       rescaled.tree = FALSE
       #need to positivise the contrasts, not just using absolutes, scale data...but is the scaling appropriate. Look at Felsenstein 1985 to understand further.
       # run for each character
@@ -46,7 +46,7 @@ RunOtherMethod <- function(phy, data) {
 }
 
 
-
+#Functions I could potentially use:
 phylolm(formula, data = list(), phy, model = c("BM", "OUrandomRoot",
                                                "OUfixedRoot", "lambda", "kappa", "delta", "EB", "trend"),
         lower.bound = NULL, upper.bound = NULL, 
