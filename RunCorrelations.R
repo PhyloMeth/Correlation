@@ -1,12 +1,10 @@
-source("CorrelationFunctions.R")
-
 setwd("~/Desktop/UTK/Spring_2016/PhyloMeth/Correlation")
+source("CorrelationFunctions.R")
 
 ## Read in a tree for the Eurycea bislineata complex, generated with SNP data. It has branch lengths.
 tree <- read.tree("Eurycea_Tree")
 
 ## Read in fake, but plausible discrete data about the presence or absence of 'big heads' and presence or absence of 'bright colors' in these salamanders. I left out one taxa to demonstrate the utility of our 'CleanData' function later on.
-
 ## Actually, this is introducing some weird formatting error that I haven't yet been able to solve. So I'm going to bail on it for now.
 #discrete.data <- read.csv(file="Eurycea_Data_2.csv", stringsAsFactors=FALSE,header=FALSE) #death to factors
 
@@ -36,7 +34,7 @@ names(new.discrete.2) <- row.names(sim.discrete.2)
 
 full.discrete <- data.frame(new.discrete.1,new.discrete.2)
 
-# We need this dumb format for the Pagel test.
+# We need this format for the Pagel test.
 pagel.discrete <- data.frame(rownames(full.discrete),full.discrete,row.names=NULL)
 
 # Here I'm simulating a continuous trait.
