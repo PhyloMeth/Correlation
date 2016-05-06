@@ -11,7 +11,7 @@ continuous.data <- rTraitCont(tree, model="BM")
 
 VisualizeData <- function(phy, data) {
 	#Important here is to LOOK at your data before running it. Any weird values? Does it all make sense? What about your tree? Polytomies?
-  plot.phylo(x, type = "phylogram", use.edge.length = TRUE,
+  plot.phylo(tree, type = "phylogram", use.edge.length = TRUE,
              node.pos = NULL, show.tip.label = TRUE, show.node.label = FALSE,
              edge.color = "black", edge.width = 1, edge.lty = 1, font = 3,
              cex = par("cex"), adj = NULL, srt = 0, no.margin = FALSE,
@@ -20,6 +20,14 @@ VisualizeData <- function(phy, data) {
              lab4ut = NULL, tip.color = "black", plot = TRUE,
              rotate.tree = 0, open.angle = 0, node.depth = 1,
              align.tip.label = FALSE, ...)
+  plot.phylo(tree, type="fan", cex=0.2)
+  # note to self, don't put the object in quotes
+  
+    print(paste("The tree has ", Ntip(tree), " terminals and ", 
+              Nnode(tree), " internal nodes out of ",Ntip(tree)-2,
+              " possible, which means it is ", 
+              round(100*(Nnode(tree)-1)/(Ntip(tree)-3), 2),
+              "% resolved", sep=""))
   name.check(phy, data, data.names=NULL)
 }
 
