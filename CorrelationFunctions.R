@@ -4,12 +4,28 @@ library(corHMM)
 library(phylolm)
 library(phytools)
 
+discrete.data <- rTraitDisc(tree, model = "ER", k=2, states=c(0,1))
+
+continuous.data <- rTraitCont(tree, model="BM")
+
+
 VisualizeData <- function(phy, data) {
 	#Important here is to LOOK at your data before running it. Any weird values? Does it all make sense? What about your tree? Polytomies?
+  plot.phylo(x, type = "phylogram", use.edge.length = TRUE,
+             node.pos = NULL, show.tip.label = TRUE, show.node.label = FALSE,
+             edge.color = "black", edge.width = 1, edge.lty = 1, font = 3,
+             cex = par("cex"), adj = NULL, srt = 0, no.margin = FALSE,
+             root.edge = FALSE, label.offset = 0, underscore = FALSE,
+             x.lim = NULL, y.lim = NULL, direction = "rightwards",
+             lab4ut = NULL, tip.color = "black", plot = TRUE,
+             rotate.tree = 0, open.angle = 0, node.depth = 1,
+             align.tip.label = FALSE, ...)
+  name.check(phy, data, data.names=NULL)
 }
 
 CleanData <- function(phy, data) {
 	#treedata() in Geiger is probably my favorite function in R.
+  treedata(phy, data, sort=FALSE, warnings=TRUE)
 }
 
 RunContrasts <- function(phy, data, output.pdf="PIC.pdf") {
